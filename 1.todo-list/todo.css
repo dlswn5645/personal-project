@@ -1,0 +1,138 @@
+/* reset */
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+input, button {
+    background: none;
+    outline: none;
+    border: none;
+}
+
+/* layout */
+body {
+    background: #e9ecef;        
+}
+
+section.todo-template {
+    width: 512px;
+    margin: 6rem auto;
+    border-radius: 5px;   
+    overflow: hidden; 
+}
+
+section.todo-template .app-title {
+    background: #d396d3;
+    color: #fff;
+    height: 4rem;
+    font-size: 1.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.todo-template .content {
+    background: #fff;
+}
+
+section.todo-template .content .todo-insert {
+    display: flex;
+    background: #dcdcdc;
+}
+
+section.todo-template .content .todo-insert input {
+    padding: 0.5rem;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    color: #000;
+    flex: 1;
+}
+
+section.todo-template .content .todo-insert input::placeholder {
+    color: #787878;
+}
+
+section.todo-template .content .todo-insert button {
+    background: #868e96;
+    color: #fff;
+    padding: 0 1rem;
+    font-size: 1.3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+section.todo-template .content .todo-insert button:hover {
+    background: #adb5bd;
+}
+
+section.todo-template .content .todo-list {
+    min-height: 320px;
+    max-height: 520px;
+    overflow: auto;
+}
+
+section.todo-template .content .todo-list .todo-list-item {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+section.todo-template .content .todo-list .todo-list-item:nth-child(even) {
+    background: #f8f9fa;
+}
+
+section.todo-template .content .todo-list .todo-list-item .checkbox {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+section.todo-template .content .todo-list .todo-list-item .checkbox input {
+    transform: scale(1.5);
+}
+
+section.todo-template .content .todo-list .todo-list-item .checkbox .text {
+    margin-left: 0.5rem;
+    flex : 1;
+}
+
+section.todo-template .content .todo-list .todo-list-item .checkbox.checked .text {
+    color: #adb5bd;
+    text-decoration: line-through;
+}
+
+section.todo-template .content .todo-list .todo-list-item .checkbox .modify-input {    
+    margin-left: 4rem;
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 200px;
+    padding: 4px;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+section.todo-template .content .todo-list .todo-list-item .modify {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    color: green;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+section.todo-template .content .todo-list .todo-list-item .remove {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #ff6b6b;
+    cursor: pointer;
+}
+
+section.todo-template .content .todo-list .todo-list-item .remove:hover {
+    color: #ff8787;
+}

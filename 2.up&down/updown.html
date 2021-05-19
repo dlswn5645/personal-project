@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UP&DOWN GAME</title>
+
+    <!-- reset.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
+    <!-- custom.css -->
+    <link rel="stylesheet" href="updown.css">
+
+</head>
+<body>
+    
+    <div class="wrapper">
+
+        <section class="main">
+
+            <h1 class="main-title">UP&DOWN GAME</h1>
+
+            <article class="number-wrapper">
+                <h2><em id="begin">1</em>부터 <em id="end">100</em> 사이의 숫자를 클릭하세요.</h2>
+
+                <div id="numbers" class="numbers"></div>
+            </article>            
+        </section>
+
+        <aside class="result">
+            <div id="up">UP</div>
+            <div id="down">DOWN</div>
+        </aside>
+
+    </div>
+
+    <div id="finish">Congratulation</div>
+
+    <!-- custom js -->
+    <script src="updown.js"></script>
+</body>
+</html>
