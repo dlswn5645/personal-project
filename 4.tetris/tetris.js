@@ -15,6 +15,7 @@ let duration = 500;
 let downInterval;
 let tempMovingItem;
 
+
 const BLOCKS = {
     square: [
         [[0,0],[0,1],[1,0],[1,1]],
@@ -105,7 +106,7 @@ function renderBlocks(moveType=''){
              }
              setTimeout(()=>{
                  renderBlocks('retry');
-                 if(moveType = 'top'){
+                 if(moveType === 'top'){
                      seizeBlock();
                  }
              },0);
@@ -178,7 +179,7 @@ function checkEmpty(target){
 
 function moveBlock(moveType, amount){
     tempMovingItem[moveType] += amount;
-    renderBlocks();
+    renderBlocks(moveType);
 }
 
 function changeDirection(){
@@ -195,6 +196,7 @@ function dropBlock(){
 
 function showGameoverText(){
     $gameText.style.display = 'flex';
+    // $gameText.classList.add ('show');
 }
 //event handling 
 document.addEventListener('keydown', e => {
@@ -220,8 +222,11 @@ document.addEventListener('keydown', e => {
     // console.log(e);
 });
 
-$restartBtn.addEventListener('click', () =>{
+$restartBtn.addEventListener('click', e=>{
+    e.preventDefault();
+    console.log('restart clicked!');
     $playground.innerHTML = '';
     $gameText.style.display = 'none';
+    // $gameText.classList.remove('show');
     init();
 });
